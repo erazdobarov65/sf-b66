@@ -1,0 +1,6 @@
+---
+
+- name: Installing packages
+  apt:
+    name: "{{ vsftpd_package }}"
+    update_cache: true
