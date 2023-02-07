@@ -1,0 +1,9 @@
+---
+# handlers file for vsftpd
+- name: restart vsftpd
+  service:
+    name: vsftpd
+    state: restarted
+  when: vsftpd_service_state != 'stopped'
+  # Ignore errors 
+  ignore_errors: yes
